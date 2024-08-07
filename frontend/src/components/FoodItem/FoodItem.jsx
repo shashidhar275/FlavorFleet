@@ -4,11 +4,11 @@ import { assets } from '../../assets/assets'
 import { StoreContext } from '../../context/storeContext'
 
 const FoodItem = ({id,name,price,description,image}) => {
-    const {cartItems,addToCart,removeFromCart} = useContext(StoreContext);
+    const {cartItems,addToCart,removeFromCart,url} = useContext(StoreContext);
   return (
     <div className='food-item'>
       <div className="food-item-img-container">
-        <img className='food-item-image' src={image} alt="" />
+        <img className='food-item-image' src={url+"/images/"+image} alt="" />{/*Image is being fetched through hitting the api endpoint*/}
         {
           !cartItems[id]
             ?<img src={assets.add_icon_white} onClick={()=>addToCart(id)} alt="" className="add" />
