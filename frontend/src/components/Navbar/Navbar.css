@@ -141,3 +141,14 @@
         display: none;
     }
 }
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #625d5c; /* Similar red-orange color */
+}
+
+.dot {
+    color: #625d5c;
+}
